@@ -18,3 +18,23 @@ int main()
 
 Compilation: gcc -Wall play.c dasSpiel.c -o play
 Ausführung: ./play
+
+
+
+WINSOCK:
+
+#include "flowerMeadow.h"
+
+int main()
+{
+	initialConnectToServer("192.168.33.1", "5555", "Yannis");
+	//connectToServer("192.168.33.1", "5555");
+	spawnPlayer();
+	startMowing();
+	rotatePlayer(100);
+	movePlayer(20);
+	printf("Distance to wall ahead: %lf\n", getDistToWall());
+	disconnect();
+
+    return 0;
+}
